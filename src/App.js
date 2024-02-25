@@ -10,30 +10,31 @@ const singerStyle= {
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>JSX</h1>
-        <div className="container">
-          <h3>Hello dude,React.How are you?</h3>
-        </div>
-        <div className="music">
-          <p>Name:{number}</p>
-          <p style={singerStyle}>Name:{singer.name}</p>
-        </div>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Person/>
+    <Person/>
+    <Person/>
+    <h5>Rock Mama React Mama</h5>
+    <Friend/>
+    <Friend/>
     </div>
   );
+}
+                                                    
+function Person(){
+  return ( <div className="person">
+    <h1>Sakib Al Hasan</h1>
+    <p>Profession: Cricket</p>
+  </div>
+  )
+}
+function Friend(){
+  return (
+      <div className="container">
+        <h3>Name: Ajay Devgan</h3>
+        <p>job: Actor</p>
+      </div>
+
+  )
 }
 
 export default App;
