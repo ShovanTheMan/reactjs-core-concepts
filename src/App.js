@@ -10,28 +10,31 @@ const singerStyle= {
 function App() {
   return (
     <div className="App">
-    <Person/>
-    <Person/>
-    <Person/>
+    <Person name="rubel" nayika="mousumi"></Person>
+    <Person name="bappa" nayika="prova"></Person>
+    <Person name="shovan" nayika="hidden"></Person>
     <h5>Rock Mama React Mama</h5>
-    <Friend/>
-    <Friend/>
+    <Friend movie="shingam" nayika="sonakki"></Friend>
+    <Friend movie="Main huu Singam" nayika="kajol"></Friend>
     </div>
   );
 }
-                                                    
-function Person(){
-  return ( <div className="person">
-    <h1>Sakib Al Hasan</h1>
-    <p>Profession: Cricket</p>
+  //similar in look differnt in data ====== props                                                  
+function Person(props){
+  
+  return ( 
+  <div className="person">
+    <h1>Nayok: {props.name}</h1>
+    <p>Nayika: {props.nayika}</p>
   </div>
   )
 }
-function Friend(){
+function Friend(props){
   return (
       <div className="container">
         <h3>Name: Ajay Devgan</h3>
-        <p>job: Actor</p>
+        <p>Details: {props.movie}</p>
+        <p>Nayika: {props.nayika}</p>
       </div>
 
   )
